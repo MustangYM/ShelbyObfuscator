@@ -26,7 +26,7 @@ ninja -j 6
 ```
 ninja install-xcode-toolchain
 ```
-
+Because llvm 16.0.2 sets some APIs as private, I made some modifications to llvm16.0.2, so don't try to copy the obfuscator pass to your own llvm, it may not work
 ## Thanks
 [llvmorg-16.0.2](https://github.com/llvm/llvm-project/releases/tag/llvmorg-16.0.2)
 
