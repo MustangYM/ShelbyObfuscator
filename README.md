@@ -28,6 +28,8 @@ ninja install-xcode-toolchain
 ```
 
 ## Thanks
+[llvmorg-16.0.2](https://github.com/llvm/llvm-project/releases/tag/llvmorg-16.0.2)
+
 [ollvm](https://github.com/obfuscator-llvm/obfuscator)
 
 [Hikari](https://github.com/HikariObfuscator/Hikari)
