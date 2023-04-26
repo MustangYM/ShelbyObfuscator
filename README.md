@@ -6,6 +6,10 @@ Obfuscator for llvm 16.0.2, Most ollvm projects are not maintained by anyone, I 
 - split
 - sub
 - bcf
+### Language
+C / C++ / Objective-C / Ada / Fortran
+### Platform
+x86 / x86-64 / PowerPC / ARM
 
 ## Usage
 If you want to use the xcode project opt or clang to debug your plugin or pass.
