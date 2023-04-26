@@ -1,3 +1,2 @@
-* linguist-vendored
-*.cpp linguist-vendored=false
-*.h linguist-vendored=false
+*.h linguist-language=C++
+*.cpp linguist-language=C++
