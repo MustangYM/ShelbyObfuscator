@@ -23,6 +23,7 @@
 #include "llvm/IR/NoFolder.h"
 #include "llvm/Support/TargetSelect.h"
 #include "llvm/Transforms/Utils/Local.h"
+
 // System libs
 #include <list>
 #include <memory>
@@ -45,7 +46,7 @@ namespace llvm{ // 基本块分割
             bool doF(Module &M);
             static bool isRequired() { return true; } // 直接返回true即可
     };
-    BogusControlFlowPass *createBogusControlFlow(bool flag); // 创建基本块分割
+    BogusControlFlowPass* createBogusControlFlow(bool flag); // 创建基本块分割
 }
 
 #endif

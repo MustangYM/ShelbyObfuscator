@@ -118,6 +118,7 @@
 //===----------------------------------------------------------------------------------===//
 #include "BogusControlFlow.h"
 
+
 namespace{
     using namespace llvm;
     static BinaryOperator *CreateFNeg(Value *Op, const Twine &Name = "", Instruction *InsertBefore = nullptr){
@@ -706,3 +707,4 @@ bool BogusControlFlowPass::doF(Module &M) {
 BogusControlFlowPass *llvm::createBogusControlFlow(bool flag){
     return new BogusControlFlowPass(flag);
 }
+
