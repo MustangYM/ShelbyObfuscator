@@ -27,6 +27,9 @@ ninja -j 6
 ```
 ninja install-xcode-toolchain
 ```
+## Important
+The most fucking import thing is the different between New and Legacy Pass Managers. [WIKI](https://llvm.org/docs/NewPassManager.html)
+
 ## Thanks
 [llvmorg-16.0.2](https://github.com/llvm/llvm-project/releases/tag/llvmorg-16.0.2)
 
