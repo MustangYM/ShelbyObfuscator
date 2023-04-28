@@ -19,11 +19,6 @@ add_llvm_library( ShelbyObfuscator MODULE BUILDTREE_ONLY
   MBAObfuscation.cpp
   MBAUtils.cpp
   FlatteningEnhanced.cpp
-
-  DEPENDS
-  intrinsics_gen
-  PLUGIN_TOOL
-  opt
 )
 
 # Use C++11 to compile your pass (i.e., supply -std=c++11).
