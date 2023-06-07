@@ -17,15 +17,15 @@ If you want to use the xcode project opt or clang to debug your plugin or pass.
 ```
 cmake -G "Xcode" -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_PROJECTS='clang;clang-tools-extra' ../llvm
 ```
-If you just wanna create an xcode-toolchain.
+If you just wanna create an xcode-toolchain on arm64 platform, and maybe change this value `-DCMAKE_OSX_ARCHITECTURES="x86_64"` on x86_64.
 ```
-cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DLLVM_CREATE_XCODE_TOOLCHAIN=ON  -DLLVM_INCLUDE_TESTS=Off -DLLVM_INCLUDE_EXAMPLES=Off -DLLVM_ENABLE_BACKTRACES=Off -DLLVM_INCLUDE_BENCHMARKS=OFF -DLLVM_BUILD_DOCS=OFF -DCMAKE_OSX_ARCHITECTURES="x86_64"  -DLLVM_TARGETS_TO_BUILD="host;AArch64" -DCMAKE_INSTALL_PREFIX="/Applications/Xcode.app/Contents/Developer/"  -DLLVM_ENABLE_PROJECTS="clang"  -DLLVM_ENABLE_NEW_PASS_MANAGER=ON ../llvm
+cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DLLVM_CREATE_XCODE_TOOLCHAIN=ON  -DLLVM_INCLUDE_TESTS=Off -DLLVM_INCLUDE_EXAMPLES=Off -DLLVM_ENABLE_BACKTRACES=Off -DLLVM_INCLUDE_BENCHMARKS=OFF -DLLVM_BUILD_DOCS=OFF -DCMAKE_OSX_ARCHITECTURES="arm64"  -DLLVM_TARGETS_TO_BUILD="host;AArch64" -DCMAKE_INSTALL_PREFIX="/Applications/Xcode.app/Contents/Developer/"  -DLLVM_ENABLE_PROJECTS="clang"  -DLLVM_ENABLE_NEW_PASS_MANAGER=ON ../llvm
 ```
 ```
 ninja -j 6
 ```
 ```
-ninja install-xcode-toolchain
+sudo ninja install-xcode-toolchain
 ```
 ## Important
 The most fucking import thing is the different between New and Legacy Pass Managers. [WIKI](https://llvm.org/docs/NewPassManager.html)
